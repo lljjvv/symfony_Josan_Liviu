@@ -1,0 +1,3 @@
+index:
+  path: /form
+  controller: App\Controller\TaskController::new
