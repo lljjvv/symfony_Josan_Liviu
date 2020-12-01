@@ -1,0 +1,15 @@
+<div class="row">
+	<style>
+		* {
+			overflow: hidden;
+		}
+	</style>
+	<div class="col-md-3"></div>
+	<div class="col-md-8">
+		{{ form_start(form, {'attr': { 'class':'col-md-8' }}) }}
+		{{ form_widget(form) }}
+		<button class="btn btn-success col-md-2">{{ button_label|default('Save') }}</button>
+		<a class="btn btn-danger col-md-2" href="{{ path('furniture_index') }}">Cancel</a>
+		{{ form_end(form) }}
+	</div>
+</div>
