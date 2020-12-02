@@ -23,9 +23,9 @@ class ProductController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         $product = new Product();
-        $product->setName("Keyboard");
-        $product->setPrice(1999);
-        $product->setDescription('Ergonomic and stylish!');
+        $product->setName("Mouse");
+        $product->setPrice(1234);
+        $product->setDescription('My description');
 
         $errors = $validator->validate($product);
         if (count($errors) > 0) {
@@ -48,7 +48,7 @@ class ProductController extends AbstractController
      */
     public function show(Product $product): Response
     {
-        return new Response('Your product '. $product->getName());
+        return new Response('The selected product is  '. $product->getName());
     }
 
     /**
